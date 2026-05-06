@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from 'react'
+import { createContext, memo, useContext, useState } from 'react'
 import DemoFrame from '../../components/DemoFrame.tsx'
 import RenderCounter from '../../components/RenderCounter.tsx'
 
@@ -6,7 +6,7 @@ const ThemeContext = createContext<string>('dark')
 const UserContext = createContext<string>('Sandra')
 const CartContext = createContext<number>(0)
 
-function ThemeBadge() {
+const ThemeBadge = memo(function ThemeBadge() {
   const theme = useContext(ThemeContext)
   return (
     <div className="rounded border border-slate-200 bg-slate-50 p-3 flex items-center justify-between">
@@ -14,9 +14,9 @@ function ThemeBadge() {
       <RenderCounter label="ThemeBadge" />
     </div>
   )
-}
+})
 
-function UserBadge() {
+const UserBadge = memo(function UserBadge() {
   const user = useContext(UserContext)
   return (
     <div className="rounded border border-slate-200 bg-slate-50 p-3 flex items-center justify-between">
@@ -24,9 +24,9 @@ function UserBadge() {
       <RenderCounter label="UserBadge" />
     </div>
   )
-}
+})
 
-function CartBadge() {
+const CartBadge = memo(function CartBadge() {
   const cartCount = useContext(CartContext)
   return (
     <div className="rounded border border-slate-200 bg-slate-50 p-3 flex items-center justify-between">
@@ -34,7 +34,7 @@ function CartBadge() {
       <RenderCounter label="CartBadge" />
     </div>
   )
-}
+})
 
 export default function ContextGood() {
   const [theme, setTheme] = useState('dark')
