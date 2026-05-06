@@ -53,19 +53,19 @@ export default function WaterfallBad() {
     >
       <div className="space-y-3">
         <div className="flex items-center gap-2">
-          <span className="text-slate-400 text-sm">User-id:</span>
+          <span className="text-slate-500 text-sm">User-id:</span>
           {[1, 2, 3].map((id) => (
             <button
               key={id}
               onClick={() => setUserId(id)}
               className={`px-3 py-1.5 rounded text-sm ${
-                userId === id ? 'bg-rose-600 text-white' : 'bg-slate-800 text-slate-300'
+                userId === id ? 'bg-rose-600 text-white' : 'bg-slate-100 text-slate-700'
               }`}
             >
               {id}
             </button>
           ))}
-          <span className="ml-auto text-sm text-slate-400">
+          <span className="ml-auto text-sm text-slate-500">
             {loading ? 'Laddar…' : 'Klar'}
           </span>
         </div>
@@ -100,9 +100,9 @@ interface BoxProps {
 
 function Box({ label, value }: BoxProps) {
   return (
-    <div className="rounded border border-slate-800 bg-slate-900 p-3">
-      <div className="text-xs uppercase text-slate-400">{label}</div>
-      <div className="text-slate-200 font-mono">{value}</div>
+    <div className="rounded border border-slate-200 bg-slate-50 p-3">
+      <div className="text-xs uppercase text-slate-500">{label}</div>
+      <div className="text-slate-800 font-mono">{value}</div>
     </div>
   )
 }

@@ -97,10 +97,10 @@ export default function Sammanfattning() {
   return (
     <div className="space-y-8 max-w-4xl">
       <header className="space-y-3">
-        <h1 className="text-4xl font-bold text-white tracking-tight">
+        <h1 className="text-4xl font-bold text-slate-900 tracking-tight">
           Sammanfattning
         </h1>
-        <p className="text-slate-300">
+        <p className="text-slate-700">
           De tre orsakerna vi började med — och verktygen vi visat under
           demonstrationerna, mappat mot var och en.
         </p>
@@ -110,37 +110,37 @@ export default function Sammanfattning() {
         {groups.map((g) => (
           <section
             key={g.title}
-            className="rounded-lg border border-slate-800 bg-slate-900 p-5 space-y-3"
+            className="rounded-lg border border-slate-200 bg-slate-50 p-5 space-y-3"
           >
             <div className="space-y-0.5">
-              <h2 className="text-lg font-semibold text-white">{g.title}</h2>
-              <p className="text-xs uppercase tracking-wide text-slate-400">
+              <h2 className="text-lg font-semibold text-slate-900">{g.title}</h2>
+              <p className="text-xs uppercase tracking-wide text-slate-500">
                 {g.subtitle}
               </p>
             </div>
-            <dl className="space-y-2 text-sm text-slate-300">
+            <dl className="space-y-2 text-sm text-slate-700">
               {g.tools.map((t) => (
                 <div key={t.name}>
                   <dt
                     className={`inline ${
                       t.mono ? 'font-mono' : ''
-                    } text-emerald-300`}
+                    } text-emerald-700`}
                   >
                     {t.name}
                   </dt>
-                  <span className="text-slate-400"> — </span>
+                  <span className="text-slate-500"> — </span>
                   {t.desc}
                   {t.demoSlug && (
                     <span className="ml-2 inline-flex gap-1 text-xs">
                       <Link
                         to={`/${t.demoSlug}/bad`}
-                        className="px-1.5 py-0.5 rounded bg-rose-600/20 text-rose-300 hover:bg-rose-600/30"
+                        className="px-1.5 py-0.5 rounded bg-rose-100 text-rose-700 hover:bg-rose-200"
                       >
                         bad
                       </Link>
                       <Link
                         to={`/${t.demoSlug}/good`}
-                        className="px-1.5 py-0.5 rounded bg-emerald-600/20 text-emerald-300 hover:bg-emerald-600/30"
+                        className="px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-700 hover:bg-emerald-200"
                       >
                         good
                       </Link>
@@ -150,7 +150,7 @@ export default function Sammanfattning() {
               ))}
             </dl>
             {g.note && (
-              <p className="text-xs text-slate-400 pt-1 border-t border-slate-800">
+              <p className="text-xs text-slate-500 pt-1 border-t border-slate-200">
                 {g.note}
               </p>
             )}
@@ -158,21 +158,21 @@ export default function Sammanfattning() {
         ))}
       </div>
 
-      <section className="rounded-lg border border-slate-800 bg-slate-900/50 p-5 space-y-2">
-        <h2 className="text-sm font-semibold text-white uppercase tracking-wide">
+      <section className="rounded-lg border border-slate-200 bg-slate-50 p-5 space-y-2">
+        <h2 className="text-sm font-semibold text-slate-900 uppercase tracking-wide">
           Tre saker att ta med sig
         </h2>
-        <ol className="text-sm text-slate-300 list-decimal pl-6 space-y-1.5">
+        <ol className="text-sm text-slate-700 list-decimal pl-6 space-y-1.5">
           <li>
-            <strong className="text-white">Mät innan du optimerar.</strong>{' '}
+            <strong className="text-slate-900">Mät innan du optimerar.</strong>{' '}
             Profiler / Performance-fliken visar var tiden faktiskt går.
           </li>
           <li>
-            <strong className="text-white">Identifiera typen av problem</strong>{' '}
+            <strong className="text-slate-900">Identifiera typen av problem</strong>{' '}
             — kod, rendering eller re-render — innan du väljer verktyg.
           </li>
           <li>
-            <strong className="text-white">React Compiler</strong> automatiserar
+            <strong className="text-slate-900">React Compiler</strong> automatiserar
             mycket av memoiseringen, men förståelsen för{' '}
             <em>varför</em> är fortfarande din bästa felsökningskompetens.
           </li>

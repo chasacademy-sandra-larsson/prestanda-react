@@ -7,12 +7,12 @@ function Row({ index, style, rows }: RowComponentProps<{ rows: RowData[] }>) {
   return (
     <div
       style={style}
-      className="px-3 py-2 flex justify-between text-sm font-mono border-b border-slate-800"
+      className="px-3 py-2 flex justify-between text-sm font-mono border-b border-slate-200"
     >
-      <span className="text-slate-200">
+      <span className="text-slate-800">
         #{r.id} · {r.name}
       </span>
-      <span className="text-slate-400">
+      <span className="text-slate-500">
         {r.city} · {r.score.toFixed(1)}
       </span>
     </div>
@@ -29,11 +29,11 @@ export default function ListGood() {
       devtools="Elements: bara ~15 rader i DOM. Performance: jämn 60 FPS vid scroll."
     >
       <div className="space-y-3">
-        <p className="text-sm text-slate-400">
+        <p className="text-sm text-slate-500">
           {ROWS.length.toLocaleString('sv-SE')} rader, men endast synliga renderas.
           Inspektera DOM:en för att se skillnaden.
         </p>
-        <div className="rounded border border-slate-800 bg-slate-900 overflow-hidden">
+        <div className="rounded border border-slate-200 bg-slate-50 overflow-hidden">
           <List
             rowCount={ROWS.length}
             rowHeight={36}

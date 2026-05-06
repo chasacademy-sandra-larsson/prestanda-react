@@ -11,25 +11,25 @@ export default function ListBad() {
       devtools="Performance: spela in scroll. DevTools Elements: kolla DOM-nod-count. Memory: heap snapshot."
     >
       <div className="space-y-3">
-        <p className="text-sm text-slate-400">
+        <p className="text-sm text-slate-500">
           {ROWS.length.toLocaleString('sv-SE')} rader. Scrolla — notera FPS i
-          Performance-fliken. Inspektera <code className="text-slate-200">&lt;ul&gt;</code>{' '}
-          och se hur många <code className="text-slate-200">&lt;li&gt;</code> som
+          Performance-fliken. Inspektera <code className="text-slate-800">&lt;ul&gt;</code>{' '}
+          och se hur många <code className="text-slate-800">&lt;li&gt;</code> som
           renderats.
         </p>
         <ul
           id="long-list"
-          className="h-[500px] overflow-auto rounded border border-slate-800 bg-slate-900 divide-y divide-slate-800"
+          className="h-[500px] overflow-auto rounded border border-slate-200 bg-slate-50 divide-y divide-slate-200"
         >
           {ROWS.map((r) => (
             <li
               key={r.id}
               className="px-3 py-2 flex justify-between text-sm font-mono"
             >
-              <span className="text-slate-200">
+              <span className="text-slate-800">
                 #{r.id} · {r.name}
               </span>
-              <span className="text-slate-400">
+              <span className="text-slate-500">
                 {r.city} · {r.score.toFixed(1)}
               </span>
             </li>

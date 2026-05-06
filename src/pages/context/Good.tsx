@@ -9,8 +9,8 @@ const CartContext = createContext<number>(0)
 function ThemeBadge() {
   const theme = useContext(ThemeContext)
   return (
-    <div className="rounded border border-slate-800 bg-slate-900 p-3 flex items-center justify-between">
-      <span>Tema: <strong className="text-emerald-300">{theme}</strong></span>
+    <div className="rounded border border-slate-200 bg-slate-50 p-3 flex items-center justify-between">
+      <span>Tema: <strong className="text-emerald-700">{theme}</strong></span>
       <RenderCounter label="ThemeBadge" />
     </div>
   )
@@ -19,8 +19,8 @@ function ThemeBadge() {
 function UserBadge() {
   const user = useContext(UserContext)
   return (
-    <div className="rounded border border-slate-800 bg-slate-900 p-3 flex items-center justify-between">
-      <span>Användare: <strong className="text-emerald-300">{user}</strong></span>
+    <div className="rounded border border-slate-200 bg-slate-50 p-3 flex items-center justify-between">
+      <span>Användare: <strong className="text-emerald-700">{user}</strong></span>
       <RenderCounter label="UserBadge" />
     </div>
   )
@@ -29,8 +29,8 @@ function UserBadge() {
 function CartBadge() {
   const cartCount = useContext(CartContext)
   return (
-    <div className="rounded border border-slate-800 bg-slate-900 p-3 flex items-center justify-between">
-      <span>Kundvagn: <strong className="text-emerald-300">{cartCount}</strong></span>
+    <div className="rounded border border-slate-200 bg-slate-50 p-3 flex items-center justify-between">
+      <span>Kundvagn: <strong className="text-emerald-700">{cartCount}</strong></span>
       <RenderCounter label="CartBadge" />
     </div>
   )

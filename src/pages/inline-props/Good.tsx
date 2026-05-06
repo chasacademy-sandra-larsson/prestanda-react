@@ -13,7 +13,7 @@ const ExpensiveButton = memo(function ExpensiveButton({ label, style, onClick }:
     <button
       onClick={onClick}
       style={style}
-      className="px-4 py-2 rounded text-white"
+      className="px-4 py-2 rounded text-slate-900"
     >
       <span className="flex items-center gap-2">
         {label}
@@ -43,7 +43,7 @@ export default function InlineGood() {
         <div className="flex items-center gap-3">
           <button
             onClick={() => setCount((c) => c + 1)}
-            className="px-4 py-2 bg-slate-700 rounded text-white"
+            className="px-4 py-2 bg-slate-200 rounded text-slate-900"
           >
             Trigga parent-render: {count}
           </button>
@@ -53,7 +53,7 @@ export default function InlineGood() {
           <ExpensiveButton label="Spara" style={SAVE_STYLE} onClick={onSave} />
           <ExpensiveButton label="Avbryt" style={CANCEL_STYLE} onClick={onCancel} />
         </div>
-        <p className="text-sm text-slate-400">
+        <p className="text-sm text-slate-500">
           Stabila referenser → memo håller — barnens räknare står still.
         </p>
       </div>

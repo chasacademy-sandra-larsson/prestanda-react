@@ -3,7 +3,7 @@ import react, { reactCompilerPreset } from '@vitejs/plugin-react'
 import babel from '@rolldown/plugin-babel'
 import tailwindcss from '@tailwindcss/vite'
 
-const enableCompiler = process.env.REACT_COMPILER === 'true'
+const enableCompiler = process.env.REACT_COMPILER === 'false'
 
 export default defineConfig({
   plugins: [

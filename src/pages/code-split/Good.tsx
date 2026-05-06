@@ -21,14 +21,14 @@ export default function CodeSplitGood() {
         >
           {show ? 'Dölj' : 'Visa'} chart
         </button>
-        <p className="text-sm text-slate-400">
+        <p className="text-sm text-slate-500">
           Öppna Network-fliken (med rensad cache) och klicka 'Visa' — chunken
           laddas just-in-time.
         </p>
         {show && (
           <Suspense
             fallback={
-              <div className="p-6 text-slate-400">Laddar chart…</div>
+              <div className="p-6 text-slate-500">Laddar chart…</div>
             }
           >
             <HeavyChart />

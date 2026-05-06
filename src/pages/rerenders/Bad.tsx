@@ -9,12 +9,12 @@ interface CardProps {
 
 function Card({ title, value }: CardProps) {
   return (
-    <div className="rounded border border-slate-800 bg-slate-900 p-4 space-y-2">
+    <div className="rounded border border-slate-200 bg-slate-50 p-4 space-y-2">
       <div className="flex items-center justify-between">
-        <h3 className="font-semibold text-white">{title}</h3>
+        <h3 className="font-semibold text-slate-900">{title}</h3>
         <RenderCounter />
       </div>
-      <div className="text-3xl font-mono text-amber-300">{value}</div>
+      <div className="text-3xl font-mono text-amber-700">{value}</div>
     </div>
   )
 }
@@ -47,7 +47,7 @@ export default function RerendersBad() {
           >
             Klick: {count}
           </button>
-          <span className="text-sm text-slate-400">
+          <span className="text-sm text-slate-500">
             (klick uppdaterar bara parent-state)
           </span>
           <RenderCounter label="parent" className="ml-auto" />

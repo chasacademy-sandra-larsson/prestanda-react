@@ -24,7 +24,7 @@ export default function HeavyBad() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Sök namn…"
-            className="px-3 py-2 rounded bg-slate-900 border border-slate-800 text-white"
+            className="px-3 py-2 rounded bg-slate-50 border border-slate-200 text-slate-900"
           />
           <button
             onClick={() => setTheme((t) => (t === 'dark' ? 'light' : 'dark'))}
@@ -35,7 +35,7 @@ export default function HeavyBad() {
           <span
             className={`px-3 py-2 rounded font-mono text-sm ${
               theme === 'dark'
-                ? 'bg-slate-900 text-slate-100 border border-slate-700'
+                ? 'bg-slate-50 text-slate-100 border border-slate-300'
                 : 'bg-amber-100 text-slate-900 border border-amber-300'
             }`}
           >
@@ -43,7 +43,7 @@ export default function HeavyBad() {
           </span>
           <RenderCounter label="parent" className="ml-auto" />
         </div>
-        <p className="text-sm text-slate-400">
+        <p className="text-sm text-slate-500">
           Klicka tema-knappen — varje klick utlöser en hel filter/sort-pass trots
           att resultatet inte beror på temat.
         </p>
@@ -51,19 +51,19 @@ export default function HeavyBad() {
           {results.map((p) => (
             <li
               key={p.id}
-              className="px-2 py-1 rounded bg-slate-900 border border-slate-800 flex justify-between"
+              className="px-2 py-1 rounded bg-slate-50 border border-slate-200 flex justify-between"
             >
               <span>{p.name}</span>
-              <span className="text-slate-400">{p.city}</span>
+              <span className="text-slate-500">{p.city}</span>
             </li>
           ))}
         </ul>
 
-        <aside className="rounded-lg border border-amber-700/50 bg-amber-950/30 p-4 text-sm space-y-2">
-          <div className="flex items-center gap-2 font-semibold text-amber-200">
+        <aside className="rounded-lg border border-amber-300 bg-amber-50 p-4 text-sm space-y-2">
+          <div className="flex items-center gap-2 font-semibold text-amber-700">
             🤔 Varför hjälper inte <code className="font-mono">async/await</code> här?
           </div>
-          <p className="text-amber-100/90">
+          <p className="text-amber-900">
             <code className="font-mono">async/await</code> löser{' '}
             <strong>I/O-bound</strong> väntan (nätverk, disk, timers) — då väntar
             browsern någon annanstans medan JS-tråden är fri. Vår filter/sort är{' '}
@@ -72,7 +72,7 @@ export default function HeavyBad() {
             blockerar lika mycket; <code className="font-mono">async</code> ger inget av sig självt
             mer än ett Promise-wrap.
           </p>
-          <p className="text-amber-100/90">
+          <p className="text-amber-900">
             För CPU-bound jobb behöver du istället: <strong>undvika jobbet</strong>{' '}
             (useMemo), <strong>flytta tråd</strong> (Web Worker),{' '}
             <strong>dela upp</strong> (time-slicing, <code className="font-mono">startTransition</code>),

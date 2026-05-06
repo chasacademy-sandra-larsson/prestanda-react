@@ -23,7 +23,7 @@ export default function HeavyGood() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Sök namn…"
-            className="px-3 py-2 rounded bg-slate-900 border border-slate-800 text-white"
+            className="px-3 py-2 rounded bg-slate-50 border border-slate-200 text-slate-900"
           />
           <button
             onClick={() => setTheme((t) => (t === 'dark' ? 'light' : 'dark'))}
@@ -34,7 +34,7 @@ export default function HeavyGood() {
           <span
             className={`px-3 py-2 rounded font-mono text-sm ${
               theme === 'dark'
-                ? 'bg-slate-900 text-slate-100 border border-slate-700'
+                ? 'bg-slate-50 text-slate-100 border border-slate-300'
                 : 'bg-amber-100 text-slate-900 border border-amber-300'
             }`}
           >
@@ -42,7 +42,7 @@ export default function HeavyGood() {
           </span>
           <RenderCounter label="parent" className="ml-auto" />
         </div>
-        <p className="text-sm text-slate-400">
+        <p className="text-sm text-slate-500">
           Tema-klick triggar render men beräkningen hoppas över — listan är cachad
           per query.
         </p>
@@ -50,10 +50,10 @@ export default function HeavyGood() {
           {results.map((p) => (
             <li
               key={p.id}
-              className="px-2 py-1 rounded bg-slate-900 border border-slate-800 flex justify-between"
+              className="px-2 py-1 rounded bg-slate-50 border border-slate-200 flex justify-between"
             >
               <span>{p.name}</span>
-              <span className="text-slate-400">{p.city}</span>
+              <span className="text-slate-500">{p.city}</span>
             </li>
           ))}
         </ul>

@@ -24,7 +24,7 @@ export default function HeavyChart() {
     <div className="space-y-2">
       <svg
         viewBox={`0 0 ${w} ${h}`}
-        className="w-full bg-slate-900 rounded border border-slate-800"
+        className="w-full bg-slate-50 rounded border border-slate-200"
       >
         <path d={path} fill="none" stroke="#34d399" strokeWidth="2" />
         {POINTS.filter((_, i) => i % 8 === 0).map((p) => (

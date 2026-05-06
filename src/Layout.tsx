@@ -10,9 +10,9 @@ const navItems = [
 export default function Layout() {
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="border-b border-slate-800 bg-slate-950/80 backdrop-blur sticky top-0 z-10">
+      <header className="border-b border-slate-200 bg-white/95 backdrop-blur sticky top-0 z-10">
         <div className="max-w-6xl mx-auto px-6 py-3 flex items-center gap-6">
-          <Link to="/intro" className="font-bold tracking-tight text-white">
+          <Link to="/intro" className="font-bold tracking-tight text-slate-900">
             ⚛️ React Prestanda
           </Link>
           <nav className="flex flex-wrap gap-1 text-sm">
@@ -24,7 +24,7 @@ export default function Layout() {
                   `px-3 py-1.5 rounded ${
                     isActive
                       ? `${item.activeClass} text-white`
-                      : 'text-slate-300 hover:bg-slate-800'
+                      : 'text-slate-700 hover:bg-slate-100'
                   }`
                 }
               >
@@ -35,7 +35,7 @@ export default function Layout() {
         </div>
       </header>
       <main className="flex-1 max-w-6xl w-full mx-auto px-6 py-8">
-        <Suspense fallback={<div className="text-slate-400">Laddar…</div>}>
+        <Suspense fallback={<div className="text-slate-500">Laddar…</div>}>
           <Outlet />
         </Suspense>
       </main>

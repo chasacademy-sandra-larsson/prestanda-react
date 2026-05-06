@@ -13,7 +13,7 @@ const ExpensiveButton = memo(function ExpensiveButton({ label, style, onClick }:
     <button
       onClick={onClick}
       style={style}
-      className="px-4 py-2 rounded text-white"
+      className="px-4 py-2 rounded text-slate-900"
     >
       <span className="flex items-center gap-2">
         {label}
@@ -38,7 +38,7 @@ export default function InlineBad() {
         <div className="flex items-center gap-3">
           <button
             onClick={() => setCount((c) => c + 1)}
-            className="px-4 py-2 bg-slate-700 rounded text-white"
+            className="px-4 py-2 bg-slate-200 rounded text-slate-900"
           >
             Trigga parent-render: {count}
           </button>
@@ -56,10 +56,10 @@ export default function InlineBad() {
             onClick={() => console.log('cancel')}
           />
         </div>
-        <p className="text-sm text-slate-400">
-          Trots <code className="text-slate-200">memo</code> renderar barnen vid varje
-          klick — för att <code className="text-slate-200">{`{ background: '...' }`}</code>{' '}
-          och <code className="text-slate-200">{'() => ...'}</code> är nya referenser varje gång.
+        <p className="text-sm text-slate-500">
+          Trots <code className="text-slate-800">memo</code> renderar barnen vid varje
+          klick — för att <code className="text-slate-800">{`{ background: '...' }`}</code>{' '}
+          och <code className="text-slate-800">{'() => ...'}</code> är nya referenser varje gång.
         </p>
       </div>
     </DemoFrame>

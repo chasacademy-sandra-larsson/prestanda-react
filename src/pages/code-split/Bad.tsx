@@ -20,7 +20,7 @@ export default function CodeSplitBad() {
         >
           {show ? 'Dölj' : 'Visa'} chart
         </button>
-        <p className="text-sm text-slate-400">
+        <p className="text-sm text-slate-500">
           Öppna Network-fliken och ladda om sidan — modulen ligger redan i
           huvudbundlen, oavsett om du klickar.
         </p>
